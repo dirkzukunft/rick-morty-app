@@ -11,10 +11,12 @@
 }
 
 .characterCard p,
-.characterCard h3 {
+.characterCard h3,
+.characterCard h6 {
   margin: 1rem;
 }
 
-.characterCard .caption {
+.characterCard h6 {
   color: #aaa;
+  font-size: 0.8rem;
 }

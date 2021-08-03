@@ -12,14 +12,12 @@ export function createCharacterCard(character) {
           createElement('p', {
             innerText: `${character.status} - ${character.species}`,
           }),
-          createElement('p', {
+          createElement('h6', {
             innerText: 'Last known location:',
-            className: 'caption',
           }),
           createElement('p', { innerText: character.location.name }),
-          createElement('p', {
+          createElement('h6', {
             innerText: 'First seen in:',
-            className: 'caption',
           }),
           createElement('p', { innerText: character.origin.name }),
         ],
