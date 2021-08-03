@@ -1,4 +1,20 @@
 .characterCard {
   display: flex;
   background-color: var(--clr-cardBackground);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-align: left;
+}
+
+.characterCard img {
+  height: 30vh;
+}
+
+.characterCard p,
+.characterCard h3 {
+  margin: 1rem;
+}
+
+.characterCard .caption {
+  color: #aaa;
 }
