@@ -38,7 +38,7 @@ html {
   margin: 0;
 }
 
-.headline {
+h1 {
   font-family: var(--font-rickmorty);
   font-size: 5rem;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
@@ -48,7 +48,7 @@ html {
   color: var(--clr-primary);
 }
 
-.headline span {
+h1 span {
   font-size: 3rem;
 }
 

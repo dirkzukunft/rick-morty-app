@@ -7,7 +7,6 @@ const main = createElement('main', {
   childElements: [
     createElement('h1', {
       innerHTML: 'Rick <span>and</span> Morty',
-      className: 'headline',
     }),
     createElement('input', {
       className: 'input',
