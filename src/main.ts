@@ -5,7 +5,7 @@ const app = document.querySelector<HTMLDivElement>('#app');
 const main = document.createElement('main');
 
 const headline = document.createElement('h1');
-headline.innerText = 'Rick and Morty';
+headline.innerHTML = `Rick <span>and</span> Morty`;
 headline.className = 'headline';
 
 const input = document.createElement('input');

@@ -47,6 +47,10 @@ html {
   color: var(--clr-primary);
 }
 
+.headline span {
+  font-size: 3rem;
+}
+
 .input {
   border: 1px solid var(--clr-primary);
   background-color: var(--clr-background);
