@@ -1,0 +1,4 @@
+.characterCard {
+  display: flex;
+  background-color: var(--clr-cardBackground);
+}

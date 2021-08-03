@@ -1,4 +1,5 @@
 import { createElement } from '../utils/createElement';
+import { characterCard } from './components/characterCard/characterCard';
 import './style.css';
 
 const app = document.querySelector<HTMLDivElement>('#app');
@@ -11,6 +12,15 @@ const main = createElement('main', {
     createElement('input', {
       className: 'input',
       placeholder: 'Search for a character...',
+    }),
+    createElement('div', {
+      className: 'cardGrid',
+      childElements: [
+        characterCard(),
+        characterCard(),
+        characterCard(),
+        characterCard(),
+      ],
     }),
   ],
 });
