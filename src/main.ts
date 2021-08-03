@@ -1,5 +1,5 @@
 import { createElement } from '../utils/createElement';
-import { characterCard } from './components/characterCard/characterCard';
+import { createCharacterCard } from './components/characterCard/characterCard';
 import './style.css';
 
 const app = document.querySelector<HTMLDivElement>('#app');
@@ -104,10 +104,10 @@ const main = createElement('main', {
     createElement('div', {
       className: 'cardGrid',
       childElements: [
-        characterCard(character1),
-        characterCard(character2),
-        characterCard(character3),
-        characterCard(character4),
+        createCharacterCard(character1),
+        createCharacterCard(character2),
+        createCharacterCard(character3),
+        createCharacterCard(character4),
       ],
     }),
   ],
