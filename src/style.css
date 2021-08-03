@@ -1,8 +1,58 @@
+@font-face {
+  font-family: 'Get Schwifty';
+  src: url('/assets/fonts/get_schwifty.ttf');
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('/assets/fonts/avenir.otf');
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-rickmorty: 'Get Schwifty', sans-serif;
+  --clr-primary: #0eb8be;
+  --clr-accent: #d2da4a;
+  --clr-background: #000;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--clr-primary);
+  background-color: var(--clr-background);
   margin-top: 60px;
+}
+
+html {
+  background-color: var(--clr-background);
+}
+
+.body {
+  margin: 0;
+}
+
+.headline {
+  font-family: var(--font-rickmorty);
+  font-size: 5rem;
+  text-shadow: 0.2rem 0 0.4rem var(--clr-accent),
+    -0.2rem 0 0.4rem var(--clr-accent), 0 0.2rem 0.4rem var(--clr-accent),
+    0 -0.2rem 0.4rem var(--clr-accent);
+  color: var(--clr-primary);
+}
+
+.input {
+  border: 1px solid var(--clr-primary);
+  background-color: var(--clr-background);
+  color: var(--clr-primary);
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  padding: 0.2em;
+  max-width: 90%;
 }
