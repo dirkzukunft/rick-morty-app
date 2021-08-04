@@ -15,11 +15,11 @@ export function createCharacterCard(character): HTMLElement {
           createElement('h6', {
             innerText: 'Last known location:',
           }),
-          createElement('p', { innerText: character.location.name }),
+          createElement('p', { innerText: character.location }),
           createElement('h6', {
             innerText: 'First seen in:',
           }),
-          createElement('p', { innerText: character.origin.name }),
+          createElement('p', { innerText: character.origin }),
         ],
       }),
     ],
