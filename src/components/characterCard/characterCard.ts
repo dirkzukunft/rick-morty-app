@@ -1,7 +1,8 @@
 import { createElement } from '../../../utils/createElement';
+import { Character } from '../../types';
 import './characterCard.css';
 
-export function createCharacterCard(character): HTMLElement {
+export function createCharacterCard(character: Character): HTMLElement {
   return createElement('article', {
     className: 'characterCard',
     childElements: [

@@ -1,10 +1,11 @@
 import { createElement } from '../utils/createElement';
 import { createCharacterCard } from './components/characterCard/characterCard';
+import { Character } from './types';
 import './style.css';
 
 const app = document.querySelector<HTMLDivElement>('#app');
 
-const character1 = {
+const character1: Character = {
   name: 'Beebo',
   status: 'Dead',
   species: 'Alien',
@@ -13,7 +14,7 @@ const character1 = {
   image: 'https://rickandmortyapi.com/api/character/avatar/33.jpeg',
 };
 
-const character2 = {
+const character2: Character = {
   name: 'Evil Beth Clone',
   status: 'Dead',
   species: 'Human',
@@ -22,7 +23,7 @@ const character2 = {
   image: 'https://rickandmortyapi.com/api/character/avatar/116.jpeg',
 };
 
-const character3 = {
+const character3: Character = {
   name: 'Rick Sanchez',
   status: 'Dead',
   species: 'Human',
@@ -31,7 +32,7 @@ const character3 = {
   image: 'https://rickandmortyapi.com/api/character/avatar/293.jpeg',
 };
 
-const character4 = {
+const character4: Character = {
   name: 'Riq IV',
   status: 'Dead',
   species: 'Human',
