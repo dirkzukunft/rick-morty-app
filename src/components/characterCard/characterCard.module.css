@@ -1,4 +1,4 @@
-.characterCard {
+.card {
   display: flex;
   background-color: var(--clr-cardBackground);
   border-radius: 0.5rem;
@@ -6,19 +6,29 @@
   text-align: left;
 }
 
-.characterCard img {
+.image {
   height: 100%;
-  max-width: 50%;
+  width: 50%;
   object-fit: cover;
 }
 
-.characterCard p,
-.characterCard h3,
-.characterCard h6 {
+.text,
+.title,
+.caption {
   margin: 1rem;
 }
 
-.characterCard h6 {
+.caption {
   color: #aaa;
   font-size: 0.8rem;
+}
+
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column;
+  }
+  .image {
+    height: 50%;
+    width: 100%;
+  }
 }
