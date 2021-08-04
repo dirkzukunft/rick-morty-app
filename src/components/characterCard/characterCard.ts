@@ -2,25 +2,32 @@ import { createElement } from '../../../utils/createElement';
 import { Character } from '../../types';
 import './characterCard.css';
 
-export function createCharacterCard(character: Character): HTMLElement {
+export function createCharacterCard({
+  name,
+  status,
+  species,
+  origin,
+  location,
+  image,
+}: Character): HTMLElement {
   return createElement('article', {
     className: 'characterCard',
     childElements: [
-      createElement('img', { src: character.image }),
+      createElement('img', { src: image }),
       createElement('div', {
         childElements: [
-          createElement('h3', { innerText: character.name }),
+          createElement('h3', { innerText: name }),
           createElement('p', {
-            innerText: `${character.status} - ${character.species}`,
+            innerText: `${status} - ${species}`,
           }),
           createElement('h6', {
             innerText: 'Last known location:',
           }),
-          createElement('p', { innerText: character.location }),
+          createElement('p', { innerText: location }),
           createElement('h6', {
             innerText: 'First seen in:',
           }),
-          createElement('p', { innerText: character.origin }),
+          createElement('p', { innerText: origin }),
         ],
       }),
     ],
