@@ -7,7 +7,9 @@
 }
 
 .characterCard img {
-  height: 30vh;
+  height: 100%;
+  max-width: 50%;
+  object-fit: cover;
 }
 
 .characterCard p,
