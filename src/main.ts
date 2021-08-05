@@ -1,4 +1,5 @@
 import { createElement } from '../utils/createElement';
+import { getCharacters } from '../utils/api';
 import { createCharacterCard } from './components/characterCard/characterCard';
 import { Character } from './types';
 import './style.css';
@@ -57,6 +58,8 @@ const main = createElement('main', {
     }),
   ],
 });
+
+console.log(getCharacters());
 
 if (app !== null) {
   app.append(main);
