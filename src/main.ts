@@ -1,44 +1,12 @@
 import { createElement } from '../utils/createElement';
+import { getCharacters } from '../utils/api';
 import { createCharacterCard } from './components/characterCard/characterCard';
-import { Character } from './types';
 import './style.css';
+import { Character } from './types';
 
 const app = document.querySelector<HTMLDivElement>('#app');
 
-const characters: Character[] = [
-  {
-    name: 'Beebo',
-    status: 'Dead',
-    species: 'Alien',
-    origin: "Morty's Mind Blowers",
-    location: 'Venzenulon 7',
-    image: 'https://rickandmortyapi.com/api/character/avatar/33.jpeg',
-  },
-  {
-    name: 'Evil Beth Clone',
-    status: 'Dead',
-    species: 'Human',
-    origin: 'unknown',
-    location: 'Earth (C-137)',
-    image: 'https://rickandmortyapi.com/api/character/avatar/116.jpeg',
-  },
-  {
-    name: 'Rick Sanchez',
-    status: 'Dead',
-    species: 'Human',
-    origin: 'Earth (Replacement Dimension)',
-    location: 'Earth (Replacement Dimension)',
-    image: 'https://rickandmortyapi.com/api/character/avatar/293.jpeg',
-  },
-  {
-    name: 'Riq IV',
-    status: 'Dead',
-    species: 'Human',
-    origin: 'unknown',
-    location: 'Citadel of Ricks',
-    image: 'https://rickandmortyapi.com/api/character/avatar/295.jpeg',
-  },
-];
+const characters: Character[] = await getCharacters();
 
 const main = createElement('main', {
   childElements: [
