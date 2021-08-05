@@ -59,7 +59,10 @@ const main = createElement('main', {
   ],
 });
 
-console.log(getCharacters());
+getCharacters()
+  .then((data) => console.log(data))
+  .catch(() => console.log('Error'));
+//console.log(getCharacters());
 
 if (app !== null) {
   app.append(main);
