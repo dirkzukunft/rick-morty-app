@@ -2,13 +2,11 @@ import { createElement } from '../utils/createElement';
 import { getCharacters } from '../utils/api';
 import { createCharacterCard } from './components/characterCard/characterCard';
 import './style.css';
+import { Character } from './types';
 
 const app = document.querySelector<HTMLDivElement>('#app');
 
-// getCharacters()
-//   .then((data) => console.log(data))
-//   .catch(() => console.log('Error'));
-const characters = await getCharacters();
+const characters: Character[] = await getCharacters();
 
 const main = createElement('main', {
   childElements: [
