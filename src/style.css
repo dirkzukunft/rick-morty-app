@@ -1,8 +1,77 @@
+@font-face {
+  font-family: 'Get Schwifty';
+  src: url('/assets/fonts/get_schwifty.ttf');
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('/assets/fonts/avenir.otf');
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-rickmorty: 'Get Schwifty', sans-serif;
+  --clr-primary: #0eb8be;
+  --clr-primary--dark: hsl(182, 86%, 25%);
+  --clr-accent: #d2da4a;
+  --clr-background: #000;
+  --clr-cardBackground: #3b3e43;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--clr-primary);
+  background-color: var(--clr-background);
   margin-top: 60px;
+}
+
+html {
+  background-color: var(--clr-background);
+}
+
+.body {
+  margin: 0;
+}
+
+h1 {
+  font-family: var(--font-rickmorty);
+  font-size: 5rem;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000, 0.4rem 0 0.6rem var(--clr-accent),
+    -0.4rem 0 0.6rem var(--clr-accent), 0 0.4rem 0.6rem var(--clr-accent),
+    0 -0.4rem 0.6rem var(--clr-accent);
+  color: var(--clr-primary);
+}
+
+h1 span {
+  font-size: 3rem;
+}
+
+.input {
+  border: 1px solid var(--clr-primary);
+  background-color: var(--clr-background);
+  color: var(--clr-primary);
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  padding: 0.4em;
+  max-width: 90%;
+}
+
+.input::placeholder {
+  color: var(--clr-primary--dark);
+  opacity: 1;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 1rem;
 }
